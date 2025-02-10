@@ -2,9 +2,45 @@
 <html>
   <head>
     <title>Quiz App - Easy Tutorials</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app"></div>
+    <div class="app">
+      <h1>Quiz Practice</h1>
+      <div class="quiz"></div>
+      <h2 id="question">Question goes here</h2>
+      <div id="answer-buttons">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+      <button id="next-btn">Next</button>
+    </div>
+
+    <form id="emailForm">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Submit</button>
+    </form>
+      
+    <script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('email').value;
+      
+    fetch('https://script.google.com/macros/s/AKfycbxaJ-0uChg6D5t49JdDoOA9C27wP1bfsETME3vQc0XYHIv0N_o9VC4G7e0jIHa-vi4z/exec', {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email: email })
+      })
+      .then(response => response.text())
+      .then(data => alert('Email added successfully!'))
+      .catch(error => alert('Error: ' + error));
+      });
+      </script>
+
+    <script src="script.js"></script>
   </body>
 </html>
