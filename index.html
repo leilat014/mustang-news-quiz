@@ -31,13 +31,16 @@
           var email = document.getElementById("email").value;
 
           fetch(
-            "https://script.google.com/macros/s/AKfycbxaJ-0uChg6D5t49JdDoOA9C27wP1bfsETME3vQc0XYHIv0N_o9VC4G7e0jIHa-vi4z/exec",
+            "https://script.google.com/macros/s/AKfycbxOT8i4TI1-qqvpAakIxh6UjmagL8PVQ-Y2EhCNDEwyPHRNFKuXtUXba_m5hF-eik0/exec",
             {
               method: "POST",
+              mode: "cors",
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({ email: email }),
+              body: JSON.stringify({
+                email: document.getElementById("email").value,
+              }),
             }
           )
             .then((response) => response.text())
