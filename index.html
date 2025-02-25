@@ -18,12 +18,12 @@
       <button id="next-btn">Next</button>
     </div>
 
-    <form id="emailForm">
+    <!-- <form id="emailForm">
       <input type="email" id="email" placeholder="Enter your email" required />
       <button type="submit">Submit</button>
-    </form>
+    </form> -->
 
-    <script>
+    <!-- <script>
       document
         .getElementById("emailForm")
         .addEventListener("submit", function (e) {
@@ -47,6 +47,45 @@
             .then((data) => alert("Email added successfully!"))
             .catch((error) => alert("Error: " + error));
         });
+    </script> -->
+
+    <fieldset>
+      Email Information
+      <form id="emailForm" onSubmit="captureEmail(event)">
+        <label for="name">Your Name: </label>
+        <input id="name" name="name" />
+        <label for="email">Enter your email address: </label>
+        <input type="email" id="email" name="email" />
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+
+    <script>
+      function captureEmail(event) {
+        event.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let username = document.getElementById("name").value;
+        let formData = { name: username, email: email };
+        const url =
+          "https://script.google.com/macros/s/AKfycbxWX8XjHxjLRB3WsW5N2EI-gp0j7nizyh5pSuWy3tn97RclSXMFAlz7RDEGeg_5N4mbag/exec"; // Replace with your Apps Script URL
+        try {
+          let response = fetch(url, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(formData),
+            headers: { "Content-Type": "application/json" },
+          });
+
+          alert("Thank You!\n Your Data was successfully submitted");
+          document.getElementById("emailForm").reset();
+        } catch (error) {
+          console.log("Server response:", error);
+          console.log("Data:", formData);
+          console.log("Data2:", email);
+          alert("Error submitting data. Please contact Mustang News.");
+        }
+      }
     </script>
 
     <script src="script.js"></script>
