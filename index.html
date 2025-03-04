@@ -7,6 +7,25 @@
   <body>
     <div class="app">
       <h1>Quiz Practice</h1>
+      <h2>Register to enter a raffle for free concert tickets!</h2>
+      <form id="emailForm" onSubmit="captureEmail(event)">
+        <div class="form-row">
+          <label for="name">Name: </label>
+          <input id="name" name="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email address: </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
       <div class="quiz"></div>
       <h2 id="question">Question goes here</h2>
       <div id="answer-buttons">
@@ -18,12 +37,12 @@
       <button id="next-btn">Next</button>
     </div>
 
-    <form id="emailForm">
+    <!-- <form id="emailForm">
       <input type="email" id="email" placeholder="Enter your email" required />
       <button type="submit">Submit</button>
-    </form>
+    </form> -->
 
-    <script>
+    <!-- <script>
       document
         .getElementById("emailForm")
         .addEventListener("submit", function (e) {
@@ -31,19 +50,64 @@
           var email = document.getElementById("email").value;
 
           fetch(
-            "https://script.google.com/macros/s/AKfycbxaJ-0uChg6D5t49JdDoOA9C27wP1bfsETME3vQc0XYHIv0N_o9VC4G7e0jIHa-vi4z/exec",
+            "https://script.google.com/macros/s/AKfycbxOT8i4TI1-qqvpAakIxh6UjmagL8PVQ-Y2EhCNDEwyPHRNFKuXtUXba_m5hF-eik0/exec",
             {
               method: "POST",
+              mode: "cors",
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({ email: email }),
+              body: JSON.stringify({
+                email: document.getElementById("email").value,
+              }),
             }
           )
             .then((response) => response.text())
             .then((data) => alert("Email added successfully!"))
             .catch((error) => alert("Error: " + error));
         });
+    </script> -->
+
+    <!-- <form id="emailForm" onSubmit="captureEmail(event)">
+      <label for="name">Name: </label>
+      <input id="name" name="name" placeholder="Enter your name" required />
+      <label for="email">Email address: </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <script>
+      function captureEmail(event) {
+        event.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let username = document.getElementById("name").value;
+        let formData = { name: username, email: email };
+        const url =
+          "https://script.google.com/macros/s/AKfycbzJYfDyaAjr6s0y03DTR4c8YhHmwVGa3boZC3h8Qm2N-PEtNVse289tcaC2g0H3ONK9Xw/exec"; // Replace with your Apps Script URL
+        try {
+          let response = fetch(url, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(formData),
+            headers: { "Content-Type": "application/json" },
+          });
+
+          alert("Thank You!\n Your Data was successfully submitted");
+          document.getElementById("emailForm").reset();
+        } catch (error) {
+          console.log("Server response:", error);
+          console.log("Data:", formData);
+          console.log("Data2:", email);
+          alert("Error submitting data. Please contact Mustang News.");
+        }
+      }
     </script>
 
     <script src="script.js"></script>
