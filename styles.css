@@ -13,14 +13,22 @@ body {
   max-width: 600px;
   margin: 100px auto 0;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
 }
 .app h1 {
   font-size: 25px;
   color: #001e4d;
   font-weight: 600;
   border-bottom: 1px solid #333;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+}
+#question {
+  margin-top: -35px;
+  line-height: 1.2;
+}
+.app h2 {
+  padding-top: 30px;
+  color: #001e4d;
 }
 .quiz {
   padding: 20px 0;
@@ -68,3 +76,89 @@ body {
 .incorrect {
   background: #ff9393;
 }
+
+form {
+  margin-top: 5px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack form elements vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.form-row {
+  display: flex; /* Align label and input horizontally */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Space between label and input */
+  width: 100%; /* Ensure rows take full width */
+  align-content: center;
+}
+
+label [type="name"] {
+  /* Makes each label appear on a new line */
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  /*margin-bottom: 4px; /* Spacing between label and input */
+}
+
+label [type="email"] {
+  display: block; /* Makes each label appear on a new line */
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  /*margin-bottom: 4px; /* Spacing between label and input */
+}
+
+input {
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  width: 30%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button[type="submit"] {
+  padding-top: 20px;
+  background: #001e4d;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 20px;
+  align-content: center;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 150px;
+}
+
+button[type="submit"]:hover {
+  background: #000000; /* Darker blue on hover */
+}
+
+/* textarea {
+  resize: vertical;
+  min-height: 100px; 
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #001e4d;
+  box-shadow: 0 0 5px rgba(0, 30, 77, 0.5);
+} */
+
+/* #emailForm {
+  font-size: 18px;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+} */
