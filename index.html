@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Quiz App - Easy Tutorials</title>
+    <title>Quiz App - Mustang News</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -37,51 +37,6 @@
       <button id="next-btn">Next</button>
     </div>
 
-    <!-- <form id="emailForm">
-      <input type="email" id="email" placeholder="Enter your email" required />
-      <button type="submit">Submit</button>
-    </form> -->
-
-    <!-- <script>
-      document
-        .getElementById("emailForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          var email = document.getElementById("email").value;
-
-          fetch(
-            "https://script.google.com/macros/s/AKfycbxOT8i4TI1-qqvpAakIxh6UjmagL8PVQ-Y2EhCNDEwyPHRNFKuXtUXba_m5hF-eik0/exec",
-            {
-              method: "POST",
-              mode: "cors",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email: document.getElementById("email").value,
-              }),
-            }
-          )
-            .then((response) => response.text())
-            .then((data) => alert("Email added successfully!"))
-            .catch((error) => alert("Error: " + error));
-        });
-    </script> -->
-
-    <!-- <form id="emailForm" onSubmit="captureEmail(event)">
-      <label for="name">Name: </label>
-      <input id="name" name="name" placeholder="Enter your name" required />
-      <label for="email">Email address: </label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-        required
-      />
-      <button type="submit">Submit</button>
-    </form> -->
-
     <script>
       function captureEmail(event) {
         event.preventDefault();
@@ -90,7 +45,7 @@
         let username = document.getElementById("name").value;
         let formData = { name: username, email: email };
         const url =
-          "https://script.google.com/macros/s/AKfycbzJYfDyaAjr6s0y03DTR4c8YhHmwVGa3boZC3h8Qm2N-PEtNVse289tcaC2g0H3ONK9Xw/exec"; // Replace with your Apps Script URL
+          "https://script.google.com/macros/s/AKfycbzJYfDyaAjr6s0y03DTR4c8YhHmwVGa3boZC3h8Qm2N-PEtNVse289tcaC2g0H3ONK9Xw/exec"; // Replace with your Apps Script URL from Google Sheets
         try {
           let response = fetch(url, {
             method: "POST",
