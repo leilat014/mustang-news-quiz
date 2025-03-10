@@ -33,12 +33,12 @@ const questions = [
   },
   {
     question:
-      "What was the primary impact of President Trump's new immigration enforcement policies on the San Luis Obispo County community, according to the article?",
+      "According to an Opinion article, what is a potential negative consequence of Cal Poly's approach to St. Fratty's Day?",
     answers: [
-      { text: "Heightened anxiety, fear, and uncertainty, particularly among undocumented and mixed-status families", correct: true },
-      { text: "Increased funding for local law enforcement", correct: false },
-      { text: "A decrease in the number of immigrants living in the county", correct: false },
-      { text: "A surge in local business growth due to increased community support", correct: false },
+      { text: "A decrease in police presence", correct: false },
+      { text: "A more sustainable and contained celebration", correct: false },
+      { text: "A potential repeat of past issues, including police violence and property damage", correct: true },
+      { text: "Increased student trust in city leadership", correct: false },
     ],
   },
   {
