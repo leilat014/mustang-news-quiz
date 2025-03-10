@@ -1,22 +1,22 @@
 const questions = [
   {
     question:
-      "What was a significant event in 2015 that brought national attention to Cal Poly's St. Fratty's Day celebrations?",
+      "What was the primary reason for the San Luis Obispo locals' protest on March 5?",
     answers: [
       {
-        text: "A record high of 150 reported criminal offenses ",
+        text: "To support President Trump's executive order",
         correct: false,
       },
       {
-        text: "A roof collapse at the annual block party",
+        text: "To celebrate the modernization of federal technology",
+        correct: false,
+      },
+      {
+        text: "o oppose President Trump's executive order and financial cuts made by the Department of Government Efficiency (DOGE)",
         correct: true,
       },
       {
-        text: "Over $24,000 worth of damages at the Red Bricks residence halls",
-        correct: false,
-      },
-      {
-        text: "The implementation of a city task force to address destruction",
+        text: "To promote folk music and Bob Dylan covers",
         correct: false,
       },
     ],
