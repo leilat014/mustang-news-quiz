@@ -12,7 +12,7 @@ const questions = [
         correct: false,
       },
       {
-        text: "o oppose President Trump's executive order and financial cuts made by the Department of Government Efficiency (DOGE)",
+        text: "To oppose President Trump's executive order and financial cuts made by the Department of Government Efficiency (DOGE)",
         correct: true,
       },
       {
@@ -23,25 +23,12 @@ const questions = [
   },
   {
     question:
-      "What is the primary purpose of United Movement's annual dance showcase, Illuminate?",
+      "What was the reason given by Cal Poly for cutting the men’s and women’s swimming and diving programs?",
     answers: [
-      { text: "To raise funds for the club's travel expenses", correct: false },
-      {
-        text: "To compete against other university dance teams",
-        correct: false,
-      },
-      { text: "To recruit new members for the United Movement dance team", correct: false },
-      { text: "To provide a platform for cultural clubs to share their traditions and experiences", correct: true },
-    ],
-  },
-  {
-    question:
-      "According to the article, what are two key countermeasures implemented by Cal Poly and the City of San Luis Obispo to address the St. Fratty's Day block party in 2024?",
-    answers: [
-      { text: "Increased police enforcement and mandatory attendance at city council meetings", correct: false },
-      { text: "Condemnation emails from the University President and increased fines for students", correct: false },
-      { text: "An on-campus alternative event and double fines under a city safety enhancement zone", correct: true },
-      { text: "Earlier start times for neighborhood parties and free shuttle services", correct: false },
+      { text: "Lack of student interest", correct: false },
+      { text: "The \"rapidly evolving and changing NCAA Division I landscape\"", correct: true },
+      { text: "Poor performance at the Big West Championships", correct: false },
+      { text: "Budget cuts unrelated to NCAA changes", correct: false },
     ],
   },
   {
@@ -56,32 +43,42 @@ const questions = [
   },
   {
     question:
-      "What is a significant challenge faced by international basketball players at Cal Poly, beyond the sport itself?",
+      "How many Cal Poly wrestlers advanced to the finals at the Pac-12 Championships?",
     answers: [
-      { text: "Difficulty in obtaining scholarships", correct: false },
-      { text: "Lack of access to training facilities", correct: false },
-      { text: "Adjusting to a new culture, balancing academics, and overcoming language barriers", correct: true },
-      { text: "Pressure from coaches to prioritize academics over basketball", correct: false },
+      { text: "Two", correct: false },
+      { text: "Three", correct: false },
+      { text: "Four", correct: false },
+      { text: "Five", correct: true },
     ],
   },
   {
     question:
-      "What is the primary concern for ShanWu's future after the current coordinators graduate?",
+      "Since its founding, how many showers has Shower the People provided across San Luis Obispo?",
     answers: [
-      { text: "Lack of funding for costumes and props", correct: false },
-      { text: "The absence of someone to take on the leadership and training responsibilities", correct: true },
-      { text: "Difficulty in securing performance venues", correct: false },
-      { text: "Declining interest in traditional Chinese dance among Cal Poly students", correct: false },
+      { text: "Over 10,000 showers", correct: false },
+      { text: " Over 15,000 showers", correct: false },
+      { text: "Over 20,000 showers", correct: false },
+      { text: "Over 25,000 showers", correct: true },
     ],
   },
   {
     question:
-      "What is the primary cause of the ongoing issues with SLO Transit's bus services, particularly for Cal Poly students?",
+      "Why was the \"Morning on the Green\" music festival organized by Cal Poly and the City of San Luis Obispo?",
     answers: [
-      { text: "Lack of student interest in using public transportation", correct: false },
-      { text: "A nationwide bus driver shortage, exacerbated by low wages and funding challenges", correct: true },
-      { text: "Frequent mechanical failures of the buses", correct: false },
-      { text: "Poor route planning and scheduling", correct: false },
+      { text: "To drive students away from the illegal street partying that has destroyed neighborhoods for over a decade", correct: true },
+      { text: "To celebrate St. Patrick's Day with a large concert", correct: false },
+      { text: "To raise money for university programs", correct: false },
+      { text: "To showcase local EDM artists", correct: false },
+    ],
+  },
+  {
+    question:
+      "What was the result of Cal Poly's Men's Basketball game against Long Beach State on March 8, 2025?",
+    answers: [
+      { text: "A narrow victory that did not impact their tournament chances", correct: false },
+      { text: "A loss, continuing their losing streak", correct: false },
+      { text: "A 83-69 win for Cal Poly, securing their spot in the Big West Championships", correct: true },
+      { text: "A tie, leading to a rematch", correct: false },
     ],
   },
 ];
